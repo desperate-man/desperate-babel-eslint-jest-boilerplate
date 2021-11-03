@@ -5,12 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Jest with current test file",
       "type": "node",
       "request": "launch",
+      "name": "Debug Jest with current test file",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
-      "args": ["--runInBand", "${file}"],
-      "cwd": "${fileDirname}",
+      "args": [
+        "${fileBasename}",
+        "--verbose",
+        "-i",
+        "--no-cache"
+      ],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }
